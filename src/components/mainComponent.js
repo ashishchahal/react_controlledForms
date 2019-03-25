@@ -1,27 +1,24 @@
 import React, {Component} from 'react';
+import ControlledInput from './controlled_input';
+import ControlledForm from './controlled_form';
 
 class Main extends Component{
     constructor(props){
         super(props);
         this.state={
-            value: ''
+            
         }
-        this.handleChange = this.handleChange.bind(this);
+        
     }
 
-    handleChange(event){
-        this.setState({
-            value: event.target.value
-        })
-    }
     render(){
-        return(
-        <div>
-            <input type="text" value={this.state.value} onChange={this.handleChange} />
-            <p>The answer is :</p>
-            <h1> {this.state.value}</h1>
+        return(<div>
+            
+            <ControlledForm />
         </div>)
     }
+    
+    
 }
 
 export default Main;
